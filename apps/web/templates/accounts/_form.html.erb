@@ -1,0 +1,33 @@
+<%=
+  form_for :user, routes.post_signup_path do
+    div(class: 'field') do
+      p(class: 'control has-icons-left') do
+        email_field :email, class: 'input', placeholder: 'Email'
+        span(class: 'icon is-small is-left') do
+          i(class: 'fas fa-envelope')
+        end
+      end
+    end
+    div(class: 'field') do
+      p(class: 'control has-icons-left') do
+        password_field :password, class: 'input', min: 8, placeholder: 'Password'
+        span(class: 'icon is-small is-left') do
+          i(class: 'fas fa-lock')
+        end
+      end
+    end
+    div(class: 'field') do
+      p(class: 'control has-icons-left') do
+        password_field :password_confirmation, class: 'input', min: 8, placeholder: 'Password again'
+        span(class: 'icon is-small is-left') do
+          i(class: 'fas fa-lock')
+        end
+      end
+    end
+    div(class: 'field') do
+      p(class: 'control has-text-centered') do
+        submit 'Sign Up', class: 'button is-success'
+      end
+    end
+  end
+%>

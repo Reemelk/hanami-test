@@ -1,0 +1,10 @@
+%nav{class: 'navbar is-light'}
+    %div{class: 'navbar-start'}
+        %a{href: "#{routes.root_path}", class: 'navbar-item'}
+            %img{src: 'https://bulma.io/images/bulma-logo.png', width: 112, height: 28}
+    %div{class: 'navbar-end'}
+        - unless current_user
+            = link_to 'Sign Up', routes.get_signup_path, class: 'navbar-item'
+            = link_to 'Sign In', routes.get_signin_path, class: 'navbar-item'
+        - else
+            = render partial: 'shared/signout_button'

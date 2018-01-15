@@ -1,0 +1,7 @@
+<a class="navbar-item">
+  <%=
+    form_for :signout, routes.delete_signout_path, method: :delete, class: 'navbar-item' do
+      submit('Sign Out')
+    end
+  %>
+</a>
